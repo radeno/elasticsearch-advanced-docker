@@ -1,11 +1,11 @@
-FROM docker.elastic.co/elasticsearch/elasticsearch:6.1.0
+FROM docker.elastic.co/elasticsearch/elasticsearch:6.1.1
 LABEL maintainer "Radovan Šmitala <rado@choco3web.eu>"
 
 # Install Lemmagen
 # RUN elasticsearch-plugin install https://github.com/vhyza/elasticsearch-analysis-lemmagen/releases/download/v5.6.3/elasticsearch-analysis-lemmagen-5.6.3-plugin.zip
 
 # Install ICU
-RUN elasticsearch-plugin install analysis-icu
+RUN elasticsearch-plugin install analysis-icu ingest-attachment
 
 # ENV HUNSPELL_VERSION 5.3-22
 
