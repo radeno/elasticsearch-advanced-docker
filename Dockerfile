@@ -1,4 +1,4 @@
-FROM docker.elastic.co/elasticsearch/elasticsearch:6.1.1
+FROM docker.elastic.co/elasticsearch/elasticsearch:6.2.2
 LABEL maintainer "Radovan Šmitala <rado@choco3web.eu>"
 
 # Install Lemmagen
