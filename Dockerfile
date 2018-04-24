@@ -1,8 +1,8 @@
-FROM docker.elastic.co/elasticsearch/elasticsearch:6.2.3
+FROM docker.elastic.co/elasticsearch/elasticsearch:6.2.4
 LABEL maintainer "Radovan Šmitala <rado@choco3web.eu>"
-
+ENV ELASTICSEARCH_VERSION 6.2.4
 # Install Lemmagen
-# RUN elasticsearch-plugin install https://github.com/vhyza/elasticsearch-analysis-lemmagen/releases/download/v5.6.3/elasticsearch-analysis-lemmagen-5.6.3-plugin.zip
+RUN elasticsearch-plugin install https://github.com/vhyza/elasticsearch-analysis-lemmagen/releases/download/v${ELASTICSEARCH_VERSION}/elasticsearch-analysis-lemmagen-${ELASTICSEARCH_VERSION}-plugin.zip
 
 # Install Plugins
 RUN elasticsearch-plugin install analysis-icu
