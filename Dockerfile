@@ -2,11 +2,11 @@ FROM docker.elastic.co/elasticsearch/elasticsearch:6.3.0
 LABEL maintainer "Radovan Šmitala <rado@choco3web.eu>"
 ENV ELASTICSEARCH_VERSION 6.3.0
 # Install Lemmagen
-RUN elasticsearch-plugin install https://github.com/vhyza/elasticsearch-analysis-lemmagen/releases/download/v${ELASTICSEARCH_VERSION}/elasticsearch-analysis-lemmagen-${ELASTICSEARCH_VERSION}-plugin.zip
+RUN elasticsearch-plugin install https://github.com/vhyza/elasticsearch-analysis-lemmagen/releases/download/v${ELASTICSEARCH_VERSION}/elasticsearch-analysis-lemmagen-${ELASTICSEARCH_VERSION}-plugin.zip --batch
 
 # Install Plugins
-RUN elasticsearch-plugin install analysis-icu
-RUN elasticsearch-plugin install ingest-attachment
+RUN elasticsearch-plugin install analysis-icu --batch
+RUN elasticsearch-plugin install ingest-attachment --batch
 
 # ENV HUNSPELL_VERSION 5.3-22
 
