@@ -5,8 +5,7 @@ ENV ELASTICSEARCH_VERSION 6.4.1
 # Install Plugins
 RUN elasticsearch-plugin install https://github.com/vhyza/elasticsearch-analysis-lemmagen/releases/download/v${ELASTICSEARCH_VERSION}/elasticsearch-analysis-lemmagen-${ELASTICSEARCH_VERSION}-plugin.zip --batch \
   && elasticsearch-plugin install analysis-icu --batch \
-  && elasticsearch-plugin install ingest-attachment --batch \
-  && elasticsearch-plugin install ingest-user-agent --batch
+  && elasticsearch-plugin install ingest-attachment --batch
 
 # ENV HUNSPELL_VERSION 5.3-22
 
