@@ -1,6 +1,6 @@
-FROM docker.elastic.co/elasticsearch/elasticsearch:6.4.1
+FROM docker.elastic.co/elasticsearch/elasticsearch:6.4.3
 LABEL maintainer "Radovan Šmitala <rado@choco3web.eu>"
-ENV ELASTICSEARCH_VERSION 6.4.1
+ENV ELASTICSEARCH_VERSION 6.4.3
 
 # Install Plugins
 RUN elasticsearch-plugin install https://github.com/vhyza/elasticsearch-analysis-lemmagen/releases/download/v${ELASTICSEARCH_VERSION}/elasticsearch-analysis-lemmagen-${ELASTICSEARCH_VERSION}-plugin.zip --batch \
