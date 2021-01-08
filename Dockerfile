@@ -1,6 +1,6 @@
-FROM docker.elastic.co/elasticsearch/elasticsearch:6.8.7
+FROM docker.elastic.co/elasticsearch/elasticsearch:6.8.13
 LABEL maintainer "Radovan Šmitala <rado@choco3web.eu>"
-ENV ELASTICSEARCH_VERSION 6.8.7
+ENV ELASTICSEARCH_VERSION 6.8.13
 
 # Install Plugins
 RUN elasticsearch-plugin install analysis-icu --batch \
