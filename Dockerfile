@@ -1,4 +1,4 @@
-FROM docker.elastic.co/elasticsearch/elasticsearch:6.6.2
+FROM docker.elastic.co/elasticsearch/elasticsearch:7.13.3
 LABEL maintainer "Radovan Šmitala <rado@choco3web.eu>"
 ENV ELASTICSEARCH_VERSION 6.6.2
 
