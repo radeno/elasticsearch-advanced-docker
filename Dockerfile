@@ -1,6 +1,6 @@
-FROM docker.elastic.co/elasticsearch/elasticsearch:6.6.2
+FROM elasticsearch:6.8.23
 LABEL maintainer "Radovan Šmitala <rado@choco3web.eu>"
-ENV ELASTICSEARCH_VERSION 6.6.2
+ENV ELASTICSEARCH_VERSION 6.8.23
 
 # Install Plugins
 RUN elasticsearch-plugin install analysis-icu --batch \
@@ -11,7 +11,7 @@ RUN elasticsearch-plugin install analysis-icu --batch \
   && mkdir config/lemmagen && mv ./lemmagen-lexicons-1.0/free/lexicons/* config/lemmagen/ \
   && rm v1.0.tar.gz && rm -R ./lemmagen-lexicons-1.0 \
 
-  # ENV HUNSPELL_VERSION 5.3-22
+  # ENV HUNSPELL_VERSION 6.4-37
 
   # Install Hunspell
   # RUN wget --progress=bar:force https://github.com/LibreOffice/dictionaries/archive/cp-$HUNSPELL_VERSION.tar.gz \
