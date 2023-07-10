@@ -1,6 +1,6 @@
-FROM elasticsearch:7.17.9
+FROM elasticsearch:8.6.1
 LABEL maintainer "Radovan Šmitala <rado@choco3web.eu>"
-ENV ELASTICSEARCH_VERSION 7.17.9
+ENV ELASTICSEARCH_VERSION 8.6.1
 
 # Install Plugins
 RUN elasticsearch-plugin install --batch analysis-icu \
