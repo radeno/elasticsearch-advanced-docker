@@ -1,6 +1,6 @@
-FROM elasticsearch:7.17.10
+FROM elasticsearch:7.17.9
 LABEL maintainer "Radovan Šmitala <rado@choco3web.eu>"
-ENV ELASTICSEARCH_VERSION 7.17.10
+ENV ELASTICSEARCH_VERSION 7.17.9
 
 # Install Plugins
 RUN elasticsearch-plugin install --batch analysis-icu \
