@@ -1,7 +1,7 @@
-FROM elasticsearch:7.17.16
+FROM elasticsearch:7.17.18
 LABEL maintainer "Radovan Šmitala <rado@choco3web.eu>"
-ENV HUNSPELL_VERSION 23.05.7-5
-ENV LEMMAGEN_VERSION 7.17.16
+ENV HUNSPELL_VERSION 23.05.9-4
+ENV LEMMAGEN_VERSION 7.17.18
 
 # Install Plugins
 RUN elasticsearch-plugin install --batch analysis-icu \
